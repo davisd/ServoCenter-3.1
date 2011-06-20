@@ -1,0 +1,57 @@
+Python Servo Controller Module for the Yost Engineering, Inc. ServoCenter 3.1 
+=============================================================================
+
+ServoCenter-3.1 is a Python module for interacting with the ServoCenter 3.1 USB controller board by Yost Engineering, Inc.
+
+For more information, see http://www.davisd.com/projects/servocenter-3.1/
+
+For more information on ServoCenter, see http://tech.yostengineering.com/servoFolder
+
+Example usage is as follows::
+
+    #!/usr/bin/python
+
+    from servocenter import ServoController
+
+    # open port /dev/ttyUSB0 with baud rate 9600
+    sc=ServoController('/dev/ttyUSB0', 9600)
+
+    # move board 0, servo 0 to position 200
+    sc.quick_move(0, 0, 200)
+
+
+Installation
+============
+
+A setup script (setup.py) is provided.  To install, simply run the script with the install command:
+
+$ python setup.py install
+
+Or just put servocenter.py somewhere in the Python path and::
+
+import servocenter
+
+
+API
+===
+
+A ServoController object is created with two arguments- the port name and baud rate.
+
+The methods in the ServoController class reflect the functions of the board as defined in the official protocol.  For protocol documentation, see http://tech.yostengineering.com/servoFolder/servocenter-downloads/servocenter-downloads
+
+To see available methods, view the servocenter.py file.
+
+
+Dependencies
+============
+
+This Python module makes use of pySerial
+http://pyserial.sourceforge.net/
+
+
+Author
+======
+
+David Davis <davisd@davisd.com>
+http://www.davisd.com
+

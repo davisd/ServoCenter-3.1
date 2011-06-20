@@ -1,0 +1,8 @@
+#.gitignore
+*.pyc
+*.wpr
+*.swp
+/lib
+/env
+/build
+
