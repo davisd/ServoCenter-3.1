@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='ServoCenter-3.1',
-    version='0.1.0',
+    version='1.0.0',
     author='David Davis',
     author_email='davisd@davisd.com',
     py_modules=['servocenter',],
