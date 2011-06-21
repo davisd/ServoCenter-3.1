@@ -43,7 +43,7 @@ class ServoController(object):
         """
         Send a command with data to the specified board
         """
-        commandstr = '%c%c%s' % (chr(15 if boardid==15 else boardid%15+240),
+        commandstr = '%c%c%s' % (chr(boardid%16+240),
             chr(command), data)
         commandstr += chr(calc_checksum(commandstr))
         # send the packet
